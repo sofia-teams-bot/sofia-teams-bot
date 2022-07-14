@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'sofia-teams-bot-webapp'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B816046195B246D2A021357723B8A561 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_70B83C1AEF154BA7A47CF8E06A45042F }}
