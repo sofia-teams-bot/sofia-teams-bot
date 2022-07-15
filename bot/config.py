@@ -12,5 +12,5 @@ class DefaultConfig:
 
     PORT = 3978
     APP_TYPE = os.environ.get("MicrosoftAppType", "MultiTenant")
-    APP_ID = os.environ.get("MicrosoftAppId", "945b3db8-4efd-43fb-b36f-2969a922dcd7")
-    APP_PASSWORD = os.environ.get("MicrosoftAppPassword", "0sd8Q~.YwviwPF~cKUr0C0TW1G9oMHAY1W-6fbMu")
+    APP_ID = os.environ.get("MicrosoftAppId", "")
+    APP_PASSWORD = os.environ.get("MicrosoftAppPassword", "")
