@@ -2,6 +2,7 @@ from botbuilder.core import ActivityHandler, MessageFactory, TurnContext
 from botbuilder.schema import ChannelAccount
 
 import requests
+import re
 
 class EchoBot(ActivityHandler):
 
@@ -19,6 +20,13 @@ class EchoBot(ActivityHandler):
                 await turn_context.send_activity("Hello and welcome!")
 
     async def on_message_activity(self, turn_context: TurnContext):
+         def parse_html_response(message):
+            message.replace("<br/>", "\n")
+            message.replace("<p>", "\n")
+            message.replace("<li>", "\n")
+            message = re.sub("<(.*?)>", "", message)
+            return message
+        
         header = {'Authorization': 'Basic Z2VuZXN5c2FkbWluLUkzOiFnZW5lc3lzIzI4'}
         query = {
                     'utterance': turn_context.activity.text,
