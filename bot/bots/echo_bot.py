@@ -36,7 +36,6 @@ class EchoBot(ActivityHandler):
 
         message = response.json()['message']
 
-        self.message_idx += 1
         return await turn_context.send_activity(
-            MessageFactory.text(str(self.message_idx) + ' ' + message)
+            MessageFactory.text(message)
         )
